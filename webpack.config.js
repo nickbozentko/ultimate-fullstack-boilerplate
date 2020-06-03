@@ -45,7 +45,8 @@ module.exports = {
         historyApiFallback: true,
         proxy: {
             '*': 'http://localhost:8080'
-        }
+        },
+        writeToDisk: true
     },
     plugins: [
         new HtmlWebpackPlugin({

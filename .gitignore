@@ -1,5 +1,5 @@
 .vscode
-.git
+coverage/
 node_modules/
 dist/
 *.log
