@@ -43,10 +43,10 @@ module.exports = {
         port: 3000,
         open: true,
         historyApiFallback: true,
-        proxy: {
-            '*': 'http://localhost:8080'
-        },
-        writeToDisk: true
+        contentBase: path.resolve(__dirname, '/dist'),
+        // proxy: {
+        //     '*': 'http://localhost:8080'
+        // },
     },
     plugins: [
         new HtmlWebpackPlugin({
