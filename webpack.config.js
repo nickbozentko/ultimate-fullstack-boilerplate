@@ -42,11 +42,11 @@ module.exports = {
     devServer: {
         port: 3000,
         open: true,
-        historyApiFallback: true,
         contentBase: path.resolve(__dirname, '/dist'),
-        // proxy: {
-        //     '*': 'http://localhost:8080'
-        // },
+        proxy: {
+            '*': 'http://localhost:8080'
+        },
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
