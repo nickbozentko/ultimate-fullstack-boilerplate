@@ -1,5 +1,5 @@
 # Start from node base
-FROM node:latest
+FROM node:12
 
 # Set working directory
 WORKDIR /usr/src/app
