@@ -1,10 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const outputDirectory = 'dist';
+const outputDirectory = '../dist'
 
 module.exports = {
-    entry: ['babel-polyfill', './src/client/index.js'],
+    entry: {
+        index: './src/packs/index.js'
+    },
     output: {
         path: path.join(__dirname, outputDirectory),
         filename: 'bundle.js',
@@ -39,19 +42,11 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
-    devServer: {
-        port: 3000,
-        open: true,
-        contentBase: path.resolve(__dirname, '/dist'),
-        proxy: {
-            '*': 'http://localhost:8080'
-        },
-        historyApiFallback: true,
-    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
-            favicon: './public/favicon.ico'
+            favicon: './public/favicon.ico',
+            filename: 'index.html'
         })
     ]
-};
+}
