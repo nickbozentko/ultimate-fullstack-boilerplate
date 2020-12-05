@@ -2,15 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const outputDirectory = '../dist'
+const outputDirectory = '../dist';
 
 module.exports = {
     entry: {
-        index: './src/packs/index.js'
+        index: './src/packs/index.js',
+        notFound: './src/packs/notFound.js'
     },
     output: {
         path: path.join(__dirname, outputDirectory),
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         publicPath: '/'
     },
     module: {
@@ -43,10 +44,18 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             favicon: './public/favicon.ico',
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+            favicon: './public/favicon.ico',
+            filename: '404/index.html',
+            chunks: ['notFound']
         })
     ]
 }
