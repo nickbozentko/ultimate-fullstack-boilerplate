@@ -1,6 +1,6 @@
 # Ultimate Fullstack Boilerplate
 
-This is a boilerplate to quickly get started building a full stack web application. It is configured with [Node](https://nodejs.org/en/), [Express](https://expressjs.com/), [React](https://reactjs.org/), [React Router](https://reacttraining.com/react-router/), [Webpack](https://webpack.js.org/), [Jest](https://jestjs.io/), [Nodemon](https://nodemon.io/), [ESLint](https://eslint.org/), and [Docker](https://www.docker.com/). 
+This is a boilerplate to quickly get started building a full stack web application. It is configured with [Node](https://nodejs.org/en/), [Express](https://expressjs.com/), [React](https://reactjs.org/), [Webpack](https://webpack.js.org/), [Jest](https://jestjs.io/), [Nodemon](https://nodemon.io/), [ESLint](https://eslint.org/), and [Docker](https://www.docker.com/). 
 
 ---
 
